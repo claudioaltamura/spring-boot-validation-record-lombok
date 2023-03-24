@@ -1,0 +1,96 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OpenAPI definition",
+    "version": "v0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Generated server url"
+    }
+  ],
+  "tags": [
+    {
+      "name": "products",
+      "description": "Products API"
+    }
+  ],
+  "paths": {
+    "/products": {
+      "get": {
+        "tags": [
+          "products"
+        ],
+        "summary": "Search for products based on product numbers",
+        "operationId": "getProducts",
+        "parameters": [
+          {
+            "name": "productNumbers",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "maxItems": 10,
+              "minItems": 1,
+              "type": "array",
+              "items": {
+                "$ref": "#/components/schemas/ProductNumber"
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/ProductResponse"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "ProductNumber": {
+        "required": [
+          "number"
+        ],
+        "type": "object",
+        "properties": {
+          "number": {
+            "type": "string",
+            "description": "product number",
+            "example": "A1"
+          }
+        },
+        "description": "Representation of a product number"
+      },
+      "ProductResponse": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "productNumber": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "description": "Representation of a product"
+      }
+    }
+  }
+}
