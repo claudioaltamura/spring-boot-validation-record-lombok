@@ -3,7 +3,7 @@ plugins {
 	id("org.springframework.boot") version "3.0.5"
 	id("io.spring.dependency-management") version "1.1.0"
 	id("org.springdoc.openapi-gradle-plugin") version "1.6.0"
-	id("com.diffplug.spotless") version "6.17.0"
+	id("com.diffplug.spotless") version "6.18.0"
 	id("com.github.ben-manes.versions") version "0.46.0"
 }
 
@@ -23,7 +23,7 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springdoc:springdoc-openapi-starter-webmvc-api:2.0.4")
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-api:2.1.0")
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	annotationProcessor("org.projectlombok:lombok")
