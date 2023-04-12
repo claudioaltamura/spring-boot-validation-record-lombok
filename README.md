@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.com/claudioaltamura/spring-boot-validation-record-lombok.svg?branch=master)](https://travis-ci.com/claudioaltamura/spring-boot-validation-record-lombok)
+[![Build Status](https://travis-ci.com/claudioaltamura/spring-boot-validation-record-lombok.svg?branch=main)](https://travis-ci.com/github/claudioaltamura/spring-boot-validation-record-lombok)
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
